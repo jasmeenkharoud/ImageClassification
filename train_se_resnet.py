@@ -259,9 +259,9 @@ def main():
 
     os.makedirs(output_folder + '/se_resnet152', exist_ok=True)
 
-    resnext_classifier = SenetResnetClassifier(num_classes, learning_rate, batch_size, num_epochs, output_folder + '/se_resnet152')
-    resnext_train_losses, resnext_train_accuracies, resnext_val_losses, resnext_val_accuracies = resnext_classifier.train(train_data_path, val_data_path)
-    resnext_classifier.plot_graphs(resnext_train_losses, resnext_train_accuracies, resnext_val_losses, resnext_val_accuracies)
+    se_resnet_classifier = SenetResnetClassifier(num_classes, learning_rate, batch_size, num_epochs, output_folder + '/se_resnet152')
+    se_resnet_train_losses, se_resnet_train_accuracies, se_resnet_val_losses, se_resnet_val_accuracies = se_resnet_classifier.train(train_data_path, val_data_path)
+    se_resnet_classifier.plot_graphs(se_resnet_train_losses, se_resnet_train_accuracies, se_resnet_val_losses, se_resnet_val_accuracies)
 
 
 if __name__ == '__main__':

@@ -203,9 +203,9 @@ def main():
 
     os.makedirs(output_folder + '/hybrid_se_resnext101', exist_ok=True)
 
-    resnext_classifier = HybridSenetResnextClassifier(num_classes, learning_rate, batch_size, num_epochs, output_folder + '/hybrid_se_resnext101')
-    resnext_train_losses, resnext_train_accuracies, resnext_val_losses, resnext_val_accuracies = resnext_classifier.train(train_data_path, val_data_path)
-    resnext_classifier.plot_graphs(resnext_train_losses, resnext_train_accuracies, resnext_val_losses, resnext_val_accuracies)
+    hybrid_se_resnext_classifier = HybridSenetResnextClassifier(num_classes, learning_rate, batch_size, num_epochs, output_folder + '/hybrid_se_resnext101')
+    hybrid_se_resnext_train_losses, hybrid_se_resnext_train_accuracies, hybrid_se_resnext_val_losses, hybrid_se_resnext_val_accuracies = hybrid_se_resnext_classifier.train(train_data_path, val_data_path)
+    hybrid_se_resnext_classifier.plot_graphs(hybrid_se_resnext_train_losses, hybrid_se_resnext_train_accuracies, hybrid_se_resnext_val_losses, hybrid_se_resnext_val_accuracies)
 
 
 if __name__ == '__main__':
